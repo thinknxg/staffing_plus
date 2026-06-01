@@ -261,3 +261,23 @@ doctype_js = {
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+doc_events = {
+    "Project": {
+        "autoname": "staffing_plus.staffing_plus.custom_script.project.set_project_name_from_lead"
+    }
+}
+
+fixtures = [
+    {
+    	"doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                [ 
+                    "Project-custom_lead",                  
+                 ]
+            ]
+        ]
+    }
+]
